@@ -5,6 +5,8 @@ import './App.css';
 import'bootstrap/dist/css/bootstrap.min.css';
 import CustomNavbar from "./components/CustomNavbar";
 import Home from './components/Home';
+import TableBooking from "./components/TableBooking";
+
 
 function App() {
   return (
@@ -13,6 +15,7 @@ function App() {
       <CustomNavbar/>
     </header>
     <main>
+<TableBooking/>
      <Home/>
     </main>
     </>

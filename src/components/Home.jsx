@@ -1,6 +1,8 @@
 import { Container, Row, Col, Carousel, ListGroup } from "react-bootstrap"
 import pastasciutte from "../data/menu.json"
 import { Component } from "react"
+import PastaReviews from "./PastaReviews"
+
 
 class Home extends (Component) {
     state = {
@@ -21,6 +23,7 @@ class Home extends (Component) {
                         console.log("SLIDE CHANGED", i)
                         this.setState({ activePasta: pastasciutte[i] })
                         }}>
+
                             {pastasciutte.map((pasta) => {
                                 return (
                                     <Carousel.Item key={pasta.id}>
@@ -36,23 +39,7 @@ class Home extends (Component) {
                         </Carousel>
                     </Col>
                 </Row>
-                <Row className="justify-content-center">
-                    <Col xs={12} md={6}>
-
-                        <ListGroup className="text-center">
-
-                            {this.state.activePasta.comments.map((c) => {
-                                return (
-                                    <ListGroup.Item key={c.id}>
-                                        {c.rating} | {c.comment}
-                                    </ListGroup.Item>
-                                )
-                            })
-                            }
-
-                        </ListGroup>
-                    </Col>
-                </Row>
+              <PastaReviews activePasta={this.state.activePasta} />
 
             </Container>
         )
