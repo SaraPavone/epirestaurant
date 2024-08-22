@@ -6,7 +6,8 @@ import'bootstrap/dist/css/bootstrap.min.css';
 import CustomNavbar from "./components/CustomNavbar";
 import Home from './components/Home';
 import TableBooking from "./components/TableBooking";
-
+import BookingList from "./components/BookingList";
+import 'bootstrap-icons/font/bootstrap-icons.css';
 
 function App() {
   return (
@@ -15,7 +16,8 @@ function App() {
       <CustomNavbar/>
     </header>
     <main>
-<TableBooking/>
+    <BookingList/>
+    <TableBooking/>
      <Home/>
     </main>
     </>
@@ -23,3 +25,24 @@ function App() {
 }
 
 export default App;
+
+
+// se voglio mettere uno spinner a tutta la pagina 
+
+//function App() {
+//  return (
+//  isLoading?(
+//    <Spinner animation="border" variant="primary" />
+//  ):(
+//    <>
+//    <header>
+//      <CustomNavbar/>
+//    </header>
+//    <main>
+//    <BookingList/>
+//    <TableBooking/>
+//     <Home/>
+//    </main>
+//    </>
+//  );
+//}
